@@ -52,21 +52,21 @@ let health = document.querySelectorAll('.health');
 let ecology = document.querySelectorAll('.ecology');
 
 let summOfAll = document.querySelectorAll('.summ-of-all');
-let summOfUsers = document.querySelectorAll('.summ-0f-all-for-users');
-let summOfChildrens = document.querySelectorAll('.summ-0f-children');
-let summOfConsultations = document.querySelectorAll('.summ-0f-consultations');
-let summOfBibiliography = document.querySelectorAll('.summ-0f-bibliography');
-let summOfOrientation = document.querySelectorAll('.summ-0f-orientations');
-let summOfHelpTech = document.querySelectorAll('.summ-0f-help-tech');
-let summOfFaculty = document.querySelectorAll('.summ-0f-faculty');
-let summOfReferences = document.querySelectorAll('.summ-0f-references');
-let summOfThemes = document.querySelectorAll('.summ-0f-themes');
-let summOfAdress = document.querySelectorAll('.summ-0f-address');
-let summOfFacts = document.querySelectorAll('.summ-0f-facts');
-let summOfClarifications = document.querySelectorAll('.summ-0f-clarifications');
-let summOfLocal = document.querySelectorAll('.summ-0f-local');
-let summOfEcology = document.querySelectorAll('.summ-0f-ecology');
-let summOfHealth = document.querySelectorAll('.summ-0f-health');
+let summOfUsers = document.querySelectorAll('.summ-of-all-for-users');
+let summOfChildrens = document.querySelectorAll('.summ-of-children');
+let summOfConsultations = document.querySelectorAll('.summ-of-consultations');
+let summOfBibiliography = document.querySelectorAll('.summ-of-bibliography');
+let summOfOrientation = document.querySelectorAll('.summ-of-orientations');
+let summOfHelpTech = document.querySelectorAll('.summ-of-help-tech');
+let summOfFaculty = document.querySelectorAll('.summ-of-faculty');
+let summOfReferences = document.querySelectorAll('.summ-of-references');
+let summOfThemes = document.querySelectorAll('.summ-of-themes');
+let summOfAdress = document.querySelectorAll('.summ-of-address');
+let summOfFacts = document.querySelectorAll('.summ-of-facts');
+let summOfClarifications = document.querySelectorAll('.summ-of-clarifications');
+let summOfLocal = document.querySelectorAll('.summ-of-local');
+let summOfEcology = document.querySelectorAll('.summ-of-ecology');
+let summOfHealth = document.querySelectorAll('.summ-of-health');
 
 function generateAllReferences(
     summ, 
@@ -87,12 +87,18 @@ function generateAllReferences(
     factography,
     locality,
     healther,
-    ecologiest
+    ecologiest,
+    allSumm,
+    sumUs,
+    referencesForSmallChildren
     ) {
-    console.log(min, max);
+
     referenceButton.addEventListener('click', function() {
         min = +min.value;
         max = +max.value;
+        let summOfEverything = 0;
+        let sumOfAllUsers = 0;
+        let smallChildren = 0;
         for (let i = 0; i < summ.length; i = i + 1) {
             orientationsConsult[i].textContent = Math.floor((Math.random() * ((40 - 20) + 20) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
             help[i].textContent = Math.floor((Math.random() * ((10 - 5) + 5) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
@@ -117,10 +123,14 @@ function generateAllReferences(
             healther[i].textContent = Math.floor(Math.random() * ((1 + 1) - 0) + 0);
 
             //Суммы всего
-            let n;
-            n = 0;
+            summOfEverything = (+summOfEverything) + (+summ[i].textContent);
+            allSumm[0].textContent = +summOfEverything;
 
-            summOfAll.textContent = n + `${+allReferences[i].textContent}`;
+            sumOfAllUsers = (+sumOfAllUsers) + (+referencesAndConsultationsForUsersOfLibrary[i].textContent);
+            sumUs[0].textContent = +sumOfAllUsers;
+
+            smallChildren = (+smallChildren) + (+forChildren[i].textContent);
+            referencesForSmallChildren[0].textContent = smallChildren;
         };
     });
 };
@@ -144,15 +154,10 @@ generateAllReferences(
     facts, 
     local, 
     health, 
-    ecology
+    ecology,
+    summOfAll,
+    summOfUsers,
+    summOfChildrens
 );
 
-console.log(row);
-
-function inFinal(data) {
-    data[data.length].innerHTML = '<tr></tr>';
-
-    return data;
-};
-
-inFinal(row);
+console.log(allReferences);
