@@ -1,6 +1,7 @@
 let month = document.getElementById('month');
 let monthButton = document.getElementById('month_button');
 let monthDays = document.querySelectorAll('.month_number');
+let row = document.querySelectorAll('tr');
 
 monthButton.addEventListener('click', function() {
     let monthLower = month.value.toLowerCase();
@@ -50,6 +51,23 @@ let local = document.querySelectorAll('.local');
 let health = document.querySelectorAll('.health');
 let ecology = document.querySelectorAll('.ecology');
 
+let summOfAll = document.querySelectorAll('.summ-of-all');
+let summOfUsers = document.querySelectorAll('.summ-0f-all-for-users');
+let summOfChildrens = document.querySelectorAll('.summ-0f-children');
+let summOfConsultations = document.querySelectorAll('.summ-0f-consultations');
+let summOfBibiliography = document.querySelectorAll('.summ-0f-bibliography');
+let summOfOrientation = document.querySelectorAll('.summ-0f-orientations');
+let summOfHelpTech = document.querySelectorAll('.summ-0f-help-tech');
+let summOfFaculty = document.querySelectorAll('.summ-0f-faculty');
+let summOfReferences = document.querySelectorAll('.summ-0f-references');
+let summOfThemes = document.querySelectorAll('.summ-0f-themes');
+let summOfAdress = document.querySelectorAll('.summ-0f-address');
+let summOfFacts = document.querySelectorAll('.summ-0f-facts');
+let summOfClarifications = document.querySelectorAll('.summ-0f-clarifications');
+let summOfLocal = document.querySelectorAll('.summ-0f-local');
+let summOfEcology = document.querySelectorAll('.summ-0f-ecology');
+let summOfHealth = document.querySelectorAll('.summ-0f-health');
+
 function generateAllReferences(
     summ, 
     min, 
@@ -94,14 +112,47 @@ function generateAllReferences(
             forChildren[i].textContent = Math.floor(((Math.random() * ((65 - 45) + 45) / 100)) * others[i].textContent);
             forBigChildren[i].textContent = Math.floor(((Math.random() * ((30 - 25) + 25) / 100)) * others[i].textContent);
 
-            locality[i].textContent = Math.floor(Math.random() * ((6 + 1) - 0) + 0);
-            ecologiest[i].textContent = Math.floor(Math.random() * ((6 + 1) - 0) + 0);
-            healther[i].textContent = Math.floor(Math.random() * ((6 + 1) - 0) + 0);
+            locality[i].textContent = Math.floor(Math.random() * ((1 + 1) - 0) + 0);
+            ecologiest[i].textContent = Math.floor(Math.random() * ((1 + 1) - 0) + 0);
+            healther[i].textContent = Math.floor(Math.random() * ((1 + 1) - 0) + 0);
+
+            //Суммы всего
+            let n;
+            n = 0;
+
+            summOfAll.textContent = n + `${+allReferences[i].textContent}`;
         };
     });
 };
 
-generateAllReferences(allReferences, minAllReferences, maxAllReferences, referencesAndConsultationsForUsersOfLibrary, referenceForChildren, bigChildren, allConsultations, references, orien, faculty, helpTech, biblio, themes, addresses, clarification, facts, local, health, ecology);
+generateAllReferences(
+    allReferences, 
+    minAllReferences, 
+    maxAllReferences, 
+    referencesAndConsultationsForUsersOfLibrary, 
+    referenceForChildren, 
+    bigChildren, 
+    allConsultations, 
+    references, 
+    orien, 
+    faculty, 
+    helpTech, 
+    biblio, 
+    themes, 
+    addresses, 
+    clarification, 
+    facts, 
+    local, 
+    health, 
+    ecology
+);
 
+console.log(row);
 
+function inFinal(data) {
+    data[data.length].innerHTML = '<tr></tr>';
 
+    return data;
+};
+
+inFinal(row);
