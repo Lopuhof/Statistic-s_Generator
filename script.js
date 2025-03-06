@@ -3,7 +3,7 @@ let monthButton = document.getElementById('month_button');
 let monthDays = document.querySelectorAll('.month_number');
 let row = document.querySelectorAll('tr');
 
-consol.log(row);
+console.log(row);
 
 monthButton.addEventListener('click', function() {
     let monthLower = month.value.toLowerCase();
@@ -22,15 +22,29 @@ monthButton.addEventListener('click', function() {
     };
 });
 
-function notWork(days) {
+
+function newClasses(rows) {
+    for (let i = 6; i < rows.length; i = i + 1) {
+        rows[i].classList.add('foneForNotWork');
+    }
+    return rows;
+}
+
+newClasses(row);
+
+let notWorkDays = document.querySelectorAll('.foneForNotWork');
+
+function notWork(days, noWorked) {
     for (let i = 0; i < days.length; i = i + 1) {
         days[i].addEventListener('click', function() {
             days[i].style.color = 'red';
+            noWorked[i].style.backgroundColor = 'blue';
         });
     };
 };
 
-notWork(monthDays);
+notWork(monthDays, notWorkDays);
+
 
 let allReferences = document.querySelectorAll('.summ_all_reference');
 let minAllReferences = document.querySelector('.min_references');
@@ -247,4 +261,3 @@ generateAllReferences(
     summOfHealth
 );
 
-console.log(allReferences);
