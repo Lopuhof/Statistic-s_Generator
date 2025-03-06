@@ -3,6 +3,8 @@ let monthButton = document.getElementById('month_button');
 let monthDays = document.querySelectorAll('.month_number');
 let row = document.querySelectorAll('tr');
 
+consol.log(row);
+
 monthButton.addEventListener('click', function() {
     let monthLower = month.value.toLowerCase();
     if ((monthLower === 'январь') || (monthLower === 'март') || (monthLower === 'май') || (monthLower === 'июль') || (monthLower === 'август') || (monthLower === 'октябрь') || (monthLower === 'декабрь')) {
@@ -54,6 +56,7 @@ let ecology = document.querySelectorAll('.ecology');
 let summOfAll = document.querySelectorAll('.summ-of-all');
 let summOfUsers = document.querySelectorAll('.summ-of-all-for-users');
 let summOfChildrens = document.querySelectorAll('.summ-of-children');
+let summOfBigChildren = document.querySelectorAll('.summ-of-big_children');
 let summOfConsultations = document.querySelectorAll('.summ-of-consultations');
 let summOfBibiliography = document.querySelectorAll('.summ-of-bibliography');
 let summOfOrientation = document.querySelectorAll('.summ-of-orientations');
@@ -90,7 +93,21 @@ function generateAllReferences(
     ecologiest,
     allSumm,
     sumUs,
-    referencesForSmallChildren
+    referencesForSmallChildren,
+    sumBigChildren,
+    consultationsOfAll,
+    manyBibliography,
+    manyOrien,
+    manyFaculty,
+    manyHelpTech,
+    manyReferences,
+    manyThemes,
+    manyAdresses,
+    manyFacts,
+    manyClarifications,
+    manyLocals,
+    manyEcology,
+    manyHealth
     ) {
 
     referenceButton.addEventListener('click', function() {
@@ -99,6 +116,20 @@ function generateAllReferences(
         let summOfEverything = 0;
         let sumOfAllUsers = 0;
         let smallChildren = 0;
+        let bigChildren = 0;
+        let manyConsultations = 0;
+        let biblioConsultations = 0;
+        let orienConsultations = 0;
+        let faculties = 0;
+        let helpsTechs = 0;
+        let referencesOfAll = 0;
+        let themesOfAll = 0;
+        let adressesOfAll = 0;
+        let factsOfAll = 0;
+        let clarificationsOfAll = 0;
+        let localsOfAll = 0;
+        let ecologyOfAll = 0;
+        let healthOfAll = 0;
         for (let i = 0; i < summ.length; i = i + 1) {
             orientationsConsult[i].textContent = Math.floor((Math.random() * ((40 - 20) + 20) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
             help[i].textContent = Math.floor((Math.random() * ((10 - 5) + 5) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
@@ -131,6 +162,48 @@ function generateAllReferences(
 
             smallChildren = (+smallChildren) + (+forChildren[i].textContent);
             referencesForSmallChildren[0].textContent = smallChildren;
+
+            bigChildren = (+bigChildren) + (+forBigChildren[i].textContent);
+            sumBigChildren[0].textContent = bigChildren;
+
+            manyConsultations = (+manyConsultations) + (+allConsultations[i].textContent);
+            consultationsOfAll[0].textContent = manyConsultations;
+
+            biblioConsultations = (+biblioConsultations) + (+biblio[i].textContent);
+            manyBibliography[0].textContent = biblioConsultations;
+
+            orienConsultations = (+orienConsultations) + (+orien[i].textContent);
+            manyOrien[0].textContent = orienConsultations;
+
+            faculties = (+faculties) + (faculty[i].textContent);
+            manyFaculty[0].textContent = faculties;
+
+            helpsTechs = (+helpsTechs) + (+helpTech[i].textContent);
+            manyHelpTech[0].textContent = helpsTechs;
+
+            referencesOfAll = (+referencesOfAll) + (+references[i].textContent);
+            manyReferences[0].textContent = referencesOfAll;
+
+            themesOfAll = (+themesOfAll) + (+theme[i].textContent);
+            manyThemes[0].textContent = themesOfAll;
+
+            adressesOfAll = (+adressesOfAll) + (+address[i].textContent);
+            manyAdresses[0].textContent = adressesOfAll;
+
+            factsOfAll = (+factsOfAll) + (+facts[i].textContent);
+            manyFacts[0].textContent = factsOfAll;
+
+            clarificationsOfAll = (+clarificationsOfAll) + (+clare[i].textContent);
+            manyClarifications[0].textContent = clarificationsOfAll;
+
+            localsOfAll = (+localsOfAll) + (+local[i].textContent);
+            manyLocals[0].textContent = localsOfAll;
+
+            ecologyOfAll = (+ecologyOfAll) + (+ecology[i].textContent);
+            manyEcology[0].textContent =  ecologyOfAll;
+
+            healthOfAll = (+healthOfAll) + (+health[i].textContent);
+            manyHealth[0].textContent = healthOfAll;
         };
     });
 };
@@ -157,7 +230,21 @@ generateAllReferences(
     ecology,
     summOfAll,
     summOfUsers,
-    summOfChildrens
+    summOfChildrens,
+    summOfBigChildren,
+    summOfConsultations,
+    summOfBibiliography,
+    summOfOrientation,
+    summOfFaculty,
+    summOfHelpTech,
+    summOfReferences,
+    summOfThemes,
+    summOfAdress,
+    summOfFacts,
+    summOfClarifications,
+    summOfLocal,
+    summOfEcology,
+    summOfHealth
 );
 
 console.log(allReferences);
