@@ -3,25 +3,7 @@ let monthButton = document.getElementById('month_button');
 let monthDays = document.querySelectorAll('.month_number');
 let row = document.querySelectorAll('tr');
 
-console.log(row);
-
-monthButton.addEventListener('click', function() {
-    let monthLower = month.value.toLowerCase();
-    if ((monthLower === 'январь') || (monthLower === 'март') || (monthLower === 'май') || (monthLower === 'июль') || (monthLower === 'август') || (monthLower === 'октябрь') || (monthLower === 'декабрь')) {
-        for (let i = 0; i < 31; i = i + 1) {
-            monthDays[i].textContent = `${i + 1}`;
-        };
-    } else if (monthLower === 'февраль') {
-        for (let i = 0; i < 29; i = i + 1) {
-            monthDays[i].textContent = `${i + 1}`;
-        };
-    } else {
-        for (let i = 0; i < 30; i = i + 1) {
-            monthDays[i].textContent = `${i + 1}`;
-        };
-    };
-});
-
+console.log(monthDays);
 
 function newClasses(rows) {
     for (let i = 6; i < rows.length; i = i + 1) {
@@ -44,7 +26,6 @@ function notWork(days, noWorked) {
 };
 
 notWork(monthDays, notWorkDays);
-
 
 let allReferences = document.querySelectorAll('.summ_all_reference');
 let minAllReferences = document.querySelector('.min_references');
@@ -123,7 +104,6 @@ function generateAllReferences(
     manyEcology,
     manyHealth
     ) {
-
     referenceButton.addEventListener('click', function() {
         min = +min.value;
         max = +max.value;
