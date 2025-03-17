@@ -148,14 +148,14 @@ function generateAllReferences(
                 summ[i].textContent = '0';
             } else {
 
-            orientationsConsult[i].textContent = Math.floor((Math.random() * ((40 - 20) + 20) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
+            orientationsConsult[i].textContent = Math.floor((Math.random() * ((70 - 40) + 40) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
             help[i].textContent = Math.floor((Math.random() * ((10 - 5) + 5) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
             bibliography[i].textContent = Math.floor((Math.random() * ((10 - 5) + 5) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
             facultations[i].textContent = '0';
             consultations[i].textContent = (+orientationsConsult[i].textContent) + (+help[i].textContent) + (+bibliography[i].textContent) + (+facultations[i].textContent);
 
-            theme[i].textContent = Math.floor((Math.random() * ((40 - 35) + 35) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
-            address[i].textContent = Math.floor((Math.random() * ((40 - 35) + 35) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
+            theme[i].textContent = Math.floor((Math.random() * ((60 - 30) + 30) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
+            address[i].textContent = Math.floor((Math.random() * ((65 - 40) + 40) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
             clare[i].textContent = Math.floor((Math.random() * ((30 - 20) + 20) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
             factography[i].textContent = Math.floor((Math.random() * ((10 - 5) + 5) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
             summOfReferences[i].textContent = (+theme[i].textContent) + (+address[i].textContent) + (+clare[i].textContent) + (+factography[i].textContent);
