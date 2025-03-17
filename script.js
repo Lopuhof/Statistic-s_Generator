@@ -1,9 +1,13 @@
 let month = document.getElementById('month');
 let monthButton = document.getElementById('month_button');
+let completeButton = document.querySelector('.complete');
+let alertInscription = document.querySelector('.alert');
+let btn = document.querySelector('.generation_references');
+let inputForMinAndMax = document.querySelectorAll('.input_for_min_and_max');
 let monthDays = document.querySelectorAll('.month_number');
 let row = document.querySelectorAll('tr');
 
-console.log(monthDays);
+console.log(completeButton);
 
 function newClasses(rows) {
     for (let i = 6; i < rows.length; i = i + 1) {
@@ -14,18 +18,30 @@ function newClasses(rows) {
 
 newClasses(row);
 
+function completeInput(btnComplete, btnNew, maxAndMinInputs, inscription) {
+    btnComplete.addEventListener('click', function(){
+        btnNew.style.display = 'block';
+        maxAndMinInputs[0].style.display = 'block';
+        maxAndMinInputs[1].style.display = 'block';
+        inscription.style.display = 'none';
+        btnComplete.style.display = 'none';
+    });
+};
+
+completeInput(completeButton, btn, inputForMinAndMax, alertInscription);
+
 let notWorkDays = document.querySelectorAll('.foneForNotWork');
 
-function notWork(days, noWorked) {
+function notWork(days, rows) {
     for (let i = 0; i < days.length; i = i + 1) {
         days[i].addEventListener('click', function() {
             days[i].style.color = 'red';
-            noWorked[i].style.backgroundColor = 'blue';
+            rows[i + 6].style.backgroundColor = '#ce93d8';
         });
     };
 };
 
-notWork(monthDays, notWorkDays);
+notWork(monthDays, row);
 
 let allReferences = document.querySelectorAll('.summ_all_reference');
 let minAllReferences = document.querySelector('.min_references');
@@ -102,7 +118,8 @@ function generateAllReferences(
     manyClarifications,
     manyLocals,
     manyEcology,
-    manyHealth
+    manyHealth,
+    days
     ) {
     referenceButton.addEventListener('click', function() {
         min = +min.value;
@@ -124,7 +141,13 @@ function generateAllReferences(
         let localsOfAll = 0;
         let ecologyOfAll = 0;
         let healthOfAll = 0;
+
         for (let i = 0; i < summ.length; i = i + 1) {
+
+            if (days[i].style.color == 'red') {
+                summ[i].textContent = '0';
+            } else {
+
             orientationsConsult[i].textContent = Math.floor((Math.random() * ((40 - 20) + 20) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
             help[i].textContent = Math.floor((Math.random() * ((10 - 5) + 5) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
             bibliography[i].textContent = Math.floor((Math.random() * ((10 - 5) + 5) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
@@ -198,6 +221,7 @@ function generateAllReferences(
 
             healthOfAll = (+healthOfAll) + (+health[i].textContent);
             manyHealth[0].textContent = healthOfAll;
+            };
         };
     });
 };
@@ -238,6 +262,7 @@ generateAllReferences(
     summOfClarifications,
     summOfLocal,
     summOfEcology,
-    summOfHealth
+    summOfHealth,
+    monthDays,
 );
 
