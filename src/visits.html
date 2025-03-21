@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Посещения</title>
+</head>
+<body>
+    
+    <div class="menu_bar">
+        <div class="menu_bar_element"><a href="../src/visits.html" class="visits active">Посещения</a></div>
+        <div class="menu_bar_element"><a href="#" class="book_circulation">Книговыдача</a></div>
+        <div class="menu_bar_element"><a href="../src/references.html" class="references">Справки</a></div>
+    </div>
+
+    <table border=1 width=100%>
+        <thead class="main-title">
+            <tr>
+                <th colspan="21">Учет посещаемости, копирования, выдачи документов</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="3">Числа месяца</th>
+                <th rowspan="3">ВСЕГО посещений(гр. 2+8)</th>
+                <th rowspan="3">Число посещений в библиотеке (гр. 3+4)</th>
+                <th rowspan="1" colspan="2">в том числе из графы 2</th>
+                <th rowspan="1" colspan="3">из низ в возрасте (из гр. 2)</th>
+                <th rowspan="3">Число посещений внестационара (гр. 9+10)</th>
+                <th rowspan="1" colspan="2">в том числе из графы 8</th>
+                <th rowspan="3">Число обращений к библиотеке удаленных пользователей ед.</th>
+                <th rowspan="3">Посещений особых пользователей (из гр.1)</th>
+                <th rowspan="3">Выдано ВСЕГО (гр.14+17+18)</th>
+                <th rowspan="1" colspan="3">В стационарном режиме</th>
+                <th rowspan="3">Во внестационарном режиме</th>
+                <th rowspan="3">В удаленном режиме</th>
+                <th rowspan="3">Выдано особым пользователям (из гр.13)</th>
+            </tr>
+            <tr>
+                <th rowspan="2">для получения библиотечно-информационных услуг</th>
+                <th rowspan="2">число посещений библиотечных мероприятий</th>
+                <th rowspan="2">детей до 14 лет включительно</th>
+                <th rowspan="2">молодежь от 15 до 30 лет включительно</th>
+                <th rowspan="2">31 год и старше</th>
+                <th rowspan="2">для получения информационно-библиотечных услуг</th>
+                <th rowspan="2">число посещений библиотечных мероприятий</th>
+                <th rowspan="2">всего</th>
+                <th rowspan="1" colspan="2">в том числе</th>
+            </tr>
+            <tr>
+                <th rowspan="1">детям до 14 лет включительно</th>
+                <th rowspan="1">молодежь 15-30 лет</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+                <th>9</th>
+                <th>10</th>
+                <th>11</th>
+                <th>12</th>
+                <th>13</th>
+                <th>14</th>
+                <th>15</th>
+                <th>16</th>
+                <th>17</th>
+                <th>18</th>
+                <th>19</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="text" placeholder="Введите от какого числа можно" class="input_for_min_and_max min_visits">
+                    <input type="text" placeholder="Введите до какого числа можно" class="input_for_min_and_max max_visits">
+                    <button class="generation_references">Сгенерировать</button>
+
+                    <span class="alert">Отметьте все выходные дни!</span>
+                    <button class="complete">Отмечено!</button>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th class="month_number">27</th>
+                <td class="summ_of_visits"></td>
+                <td class="library_visits"></td>
+                <td class="information_library_services"></td>
+                <td class="library_events"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_between_15_30"></td>
+                <td class="more_31"></td>
+                <td class="under_stations"></td>
+                <td class="stations_information_library_services"></td>
+                <td class="stations_library_events"></td>
+                <td class="udal_visiters"></td>
+                <td class="uniqual_users"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="books_of_uniqual_users"></td>
+            </tr>
+            <tr>
+                <th class="month_number">28</th>
+                <td class="summ_of_visits"></td>
+                <td class="library_visits"></td>
+                <td class="information_library_services"></td>
+                <td class="library_events"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_between_15_30"></td>
+                <td class="more_31"></td>
+                <td class="under_stations"></td>
+                <td class="stations_information_library_services"></td>
+                <td class="stations_library_events"></td>
+                <td class="udal_visiters"></td>
+                <td class="uniqual_users"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="books_of_uniqual_users"></td>
+            </tr>
+            <tr>
+                <th class="month_number">29</th>
+                <td class="summ_of_visits"></td>
+                <td class="library_visits"></td>
+                <td class="information_library_services"></td>
+                <td class="library_events"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_between_15_30"></td>
+                <td class="more_31"></td>
+                <td class="under_stations"></td>
+                <td class="stations_information_library_services"></td>
+                <td class="stations_library_events"></td>
+                <td class="udal_visiters"></td>
+                <td class="uniqual_users"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="books_of_uniqual_users"></td>
+            </tr>
+            <tr>
+                <th class="month_number">30</th>
+                <td class="summ_of_visits"></td>
+                <td class="library_visits"></td>
+                <td class="information_library_services"></td>
+                <td class="library_events"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_between_15_30"></td>
+                <td class="more_31"></td>
+                <td class="under_stations"></td>
+                <td class="stations_information_library_services"></td>
+                <td class="stations_library_events"></td>
+                <td class="udal_visiters"></td>
+                <td class="uniqual_users"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="books_of_uniqual_users"></td>
+            </tr>
+            <tr>
+                <th class="month_number">31</th>
+                <td class="summ_of_visits"></td>
+                <td class="library_visits"></td>
+                <td class="information_library_services"></td>
+                <td class="library_events"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_between_15_30"></td>
+                <td class="more_31"></td>
+                <td class="under_stations"></td>
+                <td class="stations_information_library_services"></td>
+                <td class="stations_library_events"></td>
+                <td class="udal_visiters"></td>
+                <td class="uniqual_users"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="books_of_uniqual_users"></td>
+            </tr>
+            <tr>
+                <th class="month_number">1</th>
+                <td class="summ_of_visits"></td>
+                <td class="library_visits"></td>
+                <td class="information_library_services"></td>
+                <td class="library_events"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_between_15_30"></td>
+                <td class="more_31"></td>
+                <td class="under_stations"></td>
+                <td class="stations_information_library_services"></td>
+                <td class="stations_library_events"></td>
+                <td class="udal_visiters"></td>
+                <td class="uniqual_users"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="books_of_uniqual_users"></td>
+            </tr>
+            <tr>
+                <th class="month_number">2</th>
+                <td class="summ_of_visits"></td>
+                <td class="library_visits"></td>
+                <td class="information_library_services"></td>
+                <td class="library_events"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_between_15_30"></td>
+                <td class="more_31"></td>
+                <td class="under_stations"></td>
+                <td class="stations_information_library_services"></td>
+                <td class="stations_library_events"></td>
+                <td class="udal_visiters"></td>
+                <td class="uniqual_users"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="books_of_uniqual_users"></td>
+            </tr>
+            <tr>
+                <th class="month_number">3</th>
+                <td class="summ_of_visits"></td>
+                <td class="library_visits"></td>
+                <td class="information_library_services"></td>
+                <td class="library_events"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_between_15_30"></td>
+                <td class="more_31"></td>
+                <td class="under_stations"></td>
+                <td class="stations_information_library_services"></td>
+                <td class="stations_library_events"></td>
+                <td class="udal_visiters"></td>
+                <td class="uniqual_users"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="books_of_uniqual_users"></td>
+            </tr>
+            <tr>
+                <th class="month_number">4</th>
+                <td class="summ_of_visits"></td>
+                <td class="library_visits"></td>
+                <td class="information_library_services"></td>
+                <td class="library_events"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_between_15_30"></td>
+                <td class="more_31"></td>
+                <td class="under_stations"></td>
+                <td class="stations_information_library_services"></td>
+                <td class="stations_library_events"></td>
+                <td class="udal_visiters"></td>
+                <td class="uniqual_users"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="books_of_uniqual_users"></td>
+            </tr>
+            <tr>
+                <th class="month_number">5</th>
+                <td class="summ_of_visits"></td>
+                <td class="library_visits"></td>
+                <td class="information_library_services"></td>
+                <td class="library_events"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_between_15_30"></td>
+                <td class="more_31"></td>
+                <td class="under_stations"></td>
+                <td class="stations_information_library_services"></td>
+                <td class="stations_library_events"></td>
+                <td class="udal_visiters"></td>
+                <td class="uniqual_users"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="books_of_uniqual_users"></td>
+            </tr>
+            <tr>
+                <th class="month_number">6</th>
+                <td class="summ_of_visits"></td>
+                <td class="library_visits"></td>
+                <td class="information_library_services"></td>
+                <td class="library_events"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_between_15_30"></td>
+                <td class="more_31"></td>
+                <td class="under_stations"></td>
+                <td class="stations_information_library_services"></td>
+                <td class="stations_library_events"></td>
+                <td class="udal_visiters"></td>
+                <td class="uniqual_users"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="books_of_uniqual_users"></td>
+            </tr>
+            <tr>
+                <th class="month_number">7</th>
+                <td class="summ_of_visits"></td>
+                <td class="library_visits"></td>
+                <td class="information_library_services"></td>
+                <td class="library_events"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_between_15_30"></td>
+                <td class="more_31"></td>
+                <td class="under_stations"></td>
+                <td class="stations_information_library_services"></td>
+                <td class="stations_library_events"></td>
+                <td class="udal_visiters"></td>
+                <td class="uniqual_users"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="books_of_uniqual_users"></td>
+            </tr>
+            <tr>
+                <th class="month_number">8</th>
+                <td class="summ_of_visits"></td>
+                <td class="library_visits"></td>
+                <td class="information_library_services"></td>
+                <td class="library_events"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_between_15_30"></td>
+                <td class="more_31"></td>
+                <td class="under_stations"></td>
+                <td class="stations_information_library_services"></td>
+                <td class="stations_library_events"></td>
+                <td class="udal_visiters"></td>
+                <td class="uniqual_users"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="books_of_uniqual_users"></td>
+            </tr>
+            <tr>
+                <th class="month_number">9</th>
+                <td class="summ_of_visits"></td>
+                <td class="library_visits"></td>
+                <td class="information_library_services"></td>
+                <td class="library_events"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_between_15_30"></td>
+                <td class="more_31"></td>
+                <td class="under_stations"></td>
+                <td class="stations_information_library_services"></td>
+                <td class="stations_library_events"></td>
+                <td class="udal_visiters"></td>
+                <td class="uniqual_users"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="books_of_uniqual_users"></td>
+            </tr>
+            <tr>
+                <th class="month_number">10</th>
+                <td class="summ_of_visits"></td>
+                <td class="library_visits"></td>
+                <td class="information_library_services"></td>
+                <td class="library_events"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_between_15_30"></td>
+                <td class="more_31"></td>
+                <td class="under_stations"></td>
+                <td class="stations_information_library_services"></td>
+                <td class="stations_library_events"></td>
+                <td class="udal_visiters"></td>
+                <td class="uniqual_users"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="books_of_uniqual_users"></td>
+            </tr>
+            <tr>
+                <th class="month_number">11</th>
+                <td class="summ_of_visits"></td>
+                <td class="library_visits"></td>
+                <td class="information_library_services"></td>
+                <td class="library_events"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_between_15_30"></td>
+                <td class="more_31"></td>
+                <td class="under_stations"></td>
+                <td class="stations_information_library_services"></td>
+                <td class="stations_library_events"></td>
+                <td class="udal_visiters"></td>
+                <td class="uniqual_users"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="books_of_uniqual_users"></td>
+            </tr>
+            <tr>
+                <th class="month_number">12</th>
+                <td class="summ_of_visits"></td>
+                <td class="library_visits"></td>
+                <td class="information_library_services"></td>
+                <td class="library_events"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_between_15_30"></td>
+                <td class="more_31"></td>
+                <td class="under_stations"></td>
+                <td class="stations_information_library_services"></td>
+                <td class="stations_library_events"></td>
+                <td class="udal_visiters"></td>
+                <td class="uniqual_users"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="books_of_uniqual_users"></td>
+            </tr>
+            <tr>
+                <th class="month_number">13</th>
+                <td class="summ_of_visits"></td>
+                <td class="library_visits"></td>
+                <td class="information_library_services"></td>
+                <td class="library_events"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_between_15_30"></td>
+                <td class="more_31"></td>
+                <td class="under_stations"></td>
+                <td class="stations_information_library_services"></td>
+                <td class="stations_library_events"></td>
+                <td class="udal_visiters"></td>
+                <td class="uniqual_users"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="books_of_uniqual_users"></td>
+            </tr>
+            <tr>
+                <th class="month_number">14</th>
+                <td class="summ_of_visits"></td>
+                <td class="library_visits"></td>
+                <td class="information_library_services"></td>
+                <td class="library_events"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_between_15_30"></td>
+                <td class="more_31"></td>
+                <td class="under_stations"></td>
+                <td class="stations_information_library_services"></td>
+                <td class="stations_library_events"></td>
+                <td class="udal_visiters"></td>
+                <td class="uniqual_users"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="books_of_uniqual_users"></td>
+            </tr>
+            <tr>
+                <th class="month_number">15</th>
+                <td class="summ_of_visits"></td>
+                <td class="library_visits"></td>
+                <td class="information_library_services"></td>
+                <td class="library_events"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_between_15_30"></td>
+                <td class="more_31"></td>
+                <td class="under_stations"></td>
+                <td class="stations_information_library_services"></td>
+                <td class="stations_library_events"></td>
+                <td class="udal_visiters"></td>
+                <td class="uniqual_users"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="books_of_uniqual_users"></td>
+            </tr>
+            <tr>
+                <th class="month_number">16</th>
+                <td class="summ_of_visits"></td>
+                <td class="library_visits"></td>
+                <td class="information_library_services"></td>
+                <td class="library_events"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_between_15_30"></td>
+                <td class="more_31"></td>
+                <td class="under_stations"></td>
+                <td class="stations_information_library_services"></td>
+                <td class="stations_library_events"></td>
+                <td class="udal_visiters"></td>
+                <td class="uniqual_users"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="books_of_uniqual_users"></td>
+            </tr>
+            <tr>
+                <th class="month_number">17</th>
+                <td class="summ_of_visits"></td>
+                <td class="library_visits"></td>
+                <td class="information_library_services"></td>
+                <td class="library_events"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_between_15_30"></td>
+                <td class="more_31"></td>
+                <td class="under_stations"></td>
+                <td class="stations_information_library_services"></td>
+                <td class="stations_library_events"></td>
+                <td class="udal_visiters"></td>
+                <td class="uniqual_users"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="books_of_uniqual_users"></td>
+            </tr>
+            <tr>
+                <th class="month_number">18</th>
+                <td class="summ_of_visits"></td>
+                <td class="library_visits"></td>
+                <td class="information_library_services"></td>
+                <td class="library_events"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_between_15_30"></td>
+                <td class="more_31"></td>
+                <td class="under_stations"></td>
+                <td class="stations_information_library_services"></td>
+                <td class="stations_library_events"></td>
+                <td class="udal_visiters"></td>
+                <td class="uniqual_users"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="books_of_uniqual_users"></td>
+            </tr>
+            <tr>
+                <th class="month_number">19</th>
+                <td class="summ_of_visits"></td>
+                <td class="library_visits"></td>
+                <td class="information_library_services"></td>
+                <td class="library_events"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_between_15_30"></td>
+                <td class="more_31"></td>
+                <td class="under_stations"></td>
+                <td class="stations_information_library_services"></td>
+                <td class="stations_library_events"></td>
+                <td class="udal_visiters"></td>
+                <td class="uniqual_users"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="books_of_uniqual_users"></td>
+            </tr>
+            <tr>
+                <th class="month_number">20</th>
+                <td class="summ_of_visits"></td>
+                <td class="library_visits"></td>
+                <td class="information_library_services"></td>
+                <td class="library_events"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_between_15_30"></td>
+                <td class="more_31"></td>
+                <td class="under_stations"></td>
+                <td class="stations_information_library_services"></td>
+                <td class="stations_library_events"></td>
+                <td class="udal_visiters"></td>
+                <td class="uniqual_users"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="books_of_uniqual_users"></td>
+            </tr>
+            <tr>
+                <th class="month_number">21</th>
+                <td class="summ_of_visits"></td>
+                <td class="library_visits"></td>
+                <td class="information_library_services"></td>
+                <td class="library_events"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_between_15_30"></td>
+                <td class="more_31"></td>
+                <td class="under_stations"></td>
+                <td class="stations_information_library_services"></td>
+                <td class="stations_library_events"></td>
+                <td class="udal_visiters"></td>
+                <td class="uniqual_users"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="books_of_uniqual_users"></td>
+            </tr>
+            <tr>
+                <th class="month_number">22</th>
+                <td class="summ_of_visits"></td>
+                <td class="library_visits"></td>
+                <td class="information_library_services"></td>
+                <td class="library_events"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_between_15_30"></td>
+                <td class="more_31"></td>
+                <td class="under_stations"></td>
+                <td class="stations_information_library_services"></td>
+                <td class="stations_library_events"></td>
+                <td class="udal_visiters"></td>
+                <td class="uniqual_users"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="books_of_uniqual_users"></td>
+            </tr>
+            <tr>
+                <th class="month_number">23</th>
+                <td class="summ_of_visits"></td>
+                <td class="library_visits"></td>
+                <td class="information_library_services"></td>
+                <td class="library_events"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_between_15_30"></td>
+                <td class="more_31"></td>
+                <td class="under_stations"></td>
+                <td class="stations_information_library_services"></td>
+                <td class="stations_library_events"></td>
+                <td class="udal_visiters"></td>
+                <td class="uniqual_users"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="books_of_uniqual_users"></td>
+            </tr>
+            <tr>
+                <th class="month_number">24</th>
+                <td class="summ_of_visits"></td>
+                <td class="library_visits"></td>
+                <td class="information_library_services"></td>
+                <td class="library_events"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_between_15_30"></td>
+                <td class="more_31"></td>
+                <td class="under_stations"></td>
+                <td class="stations_information_library_services"></td>
+                <td class="stations_library_events"></td>
+                <td class="udal_visiters"></td>
+                <td class="uniqual_users"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="books_of_uniqual_users"></td>
+            </tr>
+            <tr>
+                <th class="month_number">25</th>
+                <td class="summ_of_visits"></td>
+                <td class="library_visits"></td>
+                <td class="information_library_services"></td>
+                <td class="library_events"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_between_15_30"></td>
+                <td class="more_31"></td>
+                <td class="under_stations"></td>
+                <td class="stations_information_library_services"></td>
+                <td class="stations_library_events"></td>
+                <td class="udal_visiters"></td>
+                <td class="uniqual_users"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="books_of_uniqual_users"></td>
+            </tr>
+            <tr>
+                <th class="month_number">26</th>
+                <td class="summ_of_visits"></td>
+                <td class="library_visits"></td>
+                <td class="information_library_services"></td>
+                <td class="library_events"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_between_15_30"></td>
+                <td class="more_31"></td>
+                <td class="under_stations"></td>
+                <td class="stations_information_library_services"></td>
+                <td class="stations_library_events"></td>
+                <td class="udal_visiters"></td>
+                <td class="uniqual_users"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="books_of_uniqual_users"></td>
+            </tr>
+            <tr class="last-row">
+                <th>Итого</th>
+                <th class="summ_all_visits">Итого</th>
+                <th class="summ_all_visits_of_library">Итого</th>
+                <th class="summ_all_services_library">Итого</th>
+                <th>Итого</th>
+                <th class="summ_childrens14">Итого</th>
+                <th class="summ_childrens15">Итого</th>
+                <th class="summ_visits_from31">Итого</th>
+                <th>Итого</th>
+                <th>Итого</th>
+                <th>Итого</th>
+                <th>Итого</th>
+                <th class="summ_uniqual_users">Итого</th>
+                <th>Итого</th>
+                <th>Итого</th>
+                <th>Итого</th>
+                <th>Итого</th>
+                <th>Итого</th>
+                <th>Итого</th>
+                <th class="summ_books_uniqual">Итого</th>
+            </tr>
+        </tbody>
+    </table>
+
+<script src="../scripts/visitsScript.js"></script>
+
+</body>
+</html>

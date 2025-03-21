@@ -2,12 +2,9 @@ let month = document.getElementById('month');
 let monthButton = document.getElementById('month_button');
 let completeButton = document.querySelector('.complete');
 let alertInscription = document.querySelector('.alert');
-let btn = document.querySelector('.generation_references');
 let inputForMinAndMax = document.querySelectorAll('.input_for_min_and_max');
 let monthDays = document.querySelectorAll('.month_number');
 let row = document.querySelectorAll('tr');
-
-console.log(completeButton);
 
 function newClasses(rows) {
     for (let i = 6; i < rows.length; i = i + 1) {
@@ -148,7 +145,6 @@ function generateAllReferences(
                 summ[i].textContent = '0';
             } else {
 
-<<<<<<< HEAD
             orientationsConsult[i].textContent = Math.floor((Math.random() * ((60 - 50) + 50) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
             help[i].textContent = Math.floor((Math.random() * ((20 - 10) + 10) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
             bibliography[i].textContent = Math.floor((Math.random() * ((15 - 10) + 10) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
@@ -159,18 +155,6 @@ function generateAllReferences(
             address[i].textContent = Math.floor((Math.random() * ((60 - 45) + 45) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
             clare[i].textContent = Math.floor((Math.random() * ((40 - 30) + 30) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
             factography[i].textContent = Math.floor((Math.random() * ((20 - 15) + 15) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
-=======
-            orientationsConsult[i].textContent = Math.floor((Math.random() * ((70 - 40) + 40) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
-            help[i].textContent = Math.floor((Math.random() * ((10 - 5) + 5) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
-            bibliography[i].textContent = Math.floor((Math.random() * ((10 - 5) + 5) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
-            facultations[i].textContent = '0';
-            consultations[i].textContent = (+orientationsConsult[i].textContent) + (+help[i].textContent) + (+bibliography[i].textContent) + (+facultations[i].textContent);
-
-            theme[i].textContent = Math.floor((Math.random() * ((60 - 30) + 30) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
-            address[i].textContent = Math.floor((Math.random() * ((65 - 40) + 40) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
-            clare[i].textContent = Math.floor((Math.random() * ((30 - 20) + 20) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
-            factography[i].textContent = Math.floor((Math.random() * ((10 - 5) + 5) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
->>>>>>> b8efec69d2c72241dbacbb3108a605830e2aa0a8
             summOfReferences[i].textContent = (+theme[i].textContent) + (+address[i].textContent) + (+clare[i].textContent) + (+factography[i].textContent);
 
             summ[i].textContent = (+consultations[i].textContent) + (+summOfReferences[i].textContent);
@@ -230,7 +214,7 @@ function generateAllReferences(
             manyLocals[0].textContent = localsOfAll;
 
             ecologyOfAll = (+ecologyOfAll) + (+ecology[i].textContent);
-            manyEcology[0].textContent =  ecologyOfAll;
+            manyEcology[0].textContent = ecologyOfAll;
 
             healthOfAll = (+healthOfAll) + (+health[i].textContent);
             manyHealth[0].textContent = healthOfAll;

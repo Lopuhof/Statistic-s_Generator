@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+    <title>Справки</title>
 </head>
 <body>
+
+    <div class="menu_bar">
+        <div class="menu_bar_element"><a href="../src/visits.html" class="visits">Посещения</a></div>
+        <div class="menu_bar_element"><a href="#" class="book_circulation">Книговыдача</a></div>
+        <div class="menu_bar_element"><a href="../src/references.html" class="references_menu active">Справки</a></div>
+    </div>
 
     <table border=1 width=100%>
         <thead class="main-title">
@@ -81,7 +87,8 @@
                     <input type="text" placeholder="Введите до какого числа можно" class="input_for_min_and_max max_references">
                     <button class="generation_references">Сгенерировать</button>
                 </td>
-                <td><span class="alert">Отметьте все выходные дни!</span>
+                <td>
+                    <span class="alert">Отметьте все выходные дни!</span>
                     <button class="complete">Отмечено!</button>
                 </td>
                 <td></td>
@@ -900,6 +907,6 @@
         </tbody>
     </table>
 
-    <script src="script.js"></script>
+    <script src="../scripts/referencesScript.js"></script>
 </body>
 </html>
