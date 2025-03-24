@@ -5,6 +5,7 @@ let alertInscription = document.querySelector('.alert');
 let inputForMinAndMax = document.querySelectorAll('.input_for_min_and_max');
 let monthDays = document.querySelectorAll('.month_number');
 let row = document.querySelectorAll('tr');
+let referenceButton = document.querySelectorAll('.generation_references');
 
 function newClasses(rows) {
     for (let i = 6; i < rows.length; i = i + 1) {
@@ -16,7 +17,7 @@ function newClasses(rows) {
 newClasses(row);
 
 function completeInput(btnComplete, btnNew, maxAndMinInputs, inscription) {
-    btnComplete.addEventListener('click', function(){
+    btnComplete.addEventListener('click', function() {
         btnNew.style.display = 'block';
         maxAndMinInputs[0].style.display = 'block';
         maxAndMinInputs[1].style.display = 'block';
@@ -25,7 +26,7 @@ function completeInput(btnComplete, btnNew, maxAndMinInputs, inscription) {
     });
 };
 
-completeInput(completeButton, btn, inputForMinAndMax, alertInscription);
+completeInput(completeButton, referenceButton[0], inputForMinAndMax, alertInscription);
 
 let notWorkDays = document.querySelectorAll('.foneForNotWork');
 
@@ -43,7 +44,6 @@ notWork(monthDays, row);
 let allReferences = document.querySelectorAll('.summ_all_reference');
 let minAllReferences = document.querySelector('.min_references');
 let maxAllReferences = document.querySelector('.max_references');
-let referenceButton = document.querySelector('.generation_references');
 let referencesAndConsultationsForUsersOfLibrary = document.querySelectorAll('.references_for_users');
 let referenceForChildren = document.querySelectorAll('.references_for_childrens');
 let bigChildren = document.querySelectorAll('.big_children');
@@ -118,7 +118,7 @@ function generateAllReferences(
     manyHealth,
     days
     ) {
-    referenceButton.addEventListener('click', function() {
+    referenceButton[0].addEventListener('click', function() {
         min = +min.value;
         max = +max.value;
         let summOfEverything = 0;
