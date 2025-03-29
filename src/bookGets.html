@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Книговыдача</title>
+</head>
+<body>
+
+    <div class="menu_bar">
+        <div class="menu_bar_element"><a href="../src/visits.html" class="visits">Посещения</a></div>
+        <div class="menu_bar_element"><a href="../src/bookGets.html" class="book_circulation">Книговыдача</a></div>
+        <div class="menu_bar_element"><a href="../src/references.html" class="references_menu active">Справки</a></div>
+    </div>
+
+    <table border=1 width=100%>
+        <thead class="main-title">
+            <tr>
+                <th colspan="21">Книговыдача</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="3">Числа месяца</th>
+                <th rowspan="3">Выдача документов на физических носителях</th>
+                <th colspan="3">В стационарном режиме</th>
+                <th rowspan="3">Во внестационарном режиме</th>
+                <th colspan="5">Выдача документов на физических носителях (по типам-видам документов)</th>
+                <th colspan="7">Выдано документов по отраслям (из общей выдачи гр.20)</th>
+                <th rowspan="3">Выдано детской литературы</th>
+                <th rowspan="3">Выдано справочных и библиографических изданий</th>
+                <th rowspan="3">Выдано документов по краеведению</th>
+            </tr>
+            <tr>
+                <th rowspan="2">всего</th>
+                <th colspan="2">в том числе</th>
+                <th rowspan="2">ВСЕГО (сумма граф 26-29)</th>
+                <th colspan="2">Печатные документы</th>
+                <th rowspan="2">Аудио, видеокассеты</th>
+                <th rowspan="2">Оптические диски</th>
+                <th rowspan="2">Социально-экономические и политические науки</th>
+                <th rowspan="2">Естественные науки, медицина</th>
+                <th rowspan="2">Техника, сельское хозяйство</th>
+                <th rowspan="2">Искусство. Физическая культура. Спорт</th>
+                <th rowspan="2">Филология. Языкознание</th>
+                <th rowspan="2">Художественная литература</th>
+                <th rowspan="2">Литература для дошкольного и младшего школьного возраста</th>
+            </tr>
+            <tr>
+                <th>детям до 14 лет включительно</th>
+                <th>молодежь 15-30 лет</th>
+                <th>Книги, брошюры</th>
+                <th>Журналы, газеты</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th>20</th>
+                <th>21</th>
+                <th>22</th>
+                <th>23</th>
+                <th>24</th>
+                <th>25</th>
+                <th>26</th>
+                <th>27</th>
+                <th>28</th>
+                <th>29</th>
+                <th>30</th>
+                <th>31</th>
+                <th>32</th>
+                <th>33</th>
+                <th>34</th>
+                <th>35</th>
+                <th>36</th>
+                <th>37</th>
+                <th>38</th>
+                <th>39</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="text" placeholder="Введите от какого числа можно" class="input_for_min_and_max min_books">
+                    <input type="text" placeholder="Введите до какого числа можно" class="input_for_min_and_max max_books">
+                    <button class="generation_references">Сгенерировать</button>
+
+                    <span class="alert">Отметьте все выходные дни!</span>
+                    <button class="complete">Отмечено!</button>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th class="month_number">27</th>
+                <td class="fisical_documents"></td>
+                <td class="all_station_documents"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_more_15"></td>
+                <td></td>
+                <td class="all_documents_types_and_view"></td>
+                <td class="books"></td>
+                <td class="magazines"></td>
+                <td></td>
+                <td></td>
+                <td class="socials_and_economics"></td>
+                <td class="medicine"></td>
+                <td class="technic"></td>
+                <td class="art_and_fhysical_education"></td>
+                <td class="languages"></td>
+                <td class="artistic-literature"></td>
+                <td class="for_small_children"></td>
+                <td class="childrens_literature"></td>
+                <td class="bibliography"></td>
+                <td class="local"></td>
+            </tr>
+            <tr>
+                <th class="month_number">28</th>
+                <td class="fisical_documents"></td>
+                <td class="all_station_documents"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_more_15"></td>
+                <td></td>
+                <td class="all_documents_types_and_view"></td>
+                <td class="books"></td>
+                <td class="magazines"></td>
+                <td></td>
+                <td></td>
+                <td class="socials_and_economics"></td>
+                <td class="medicine"></td>
+                <td class="technic"></td>
+                <td class="art_and_fhysical_education"></td>
+                <td class="languages"></td>
+                <td class="artistic-literature"></td>
+                <td class="for_small_children"></td>
+                <td class="childrens_literature"></td>
+                <td class="bibliography"></td>
+                <td class="local"></td>
+            </tr>
+            <tr>
+                <th class="month_number">29</th>
+                <td class="fisical_documents"></td>
+                <td class="all_station_documents"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_more_15"></td>
+                <td></td>
+                <td class="all_documents_types_and_view"></td>
+                <td class="books"></td>
+                <td class="magazines"></td>
+                <td></td>
+                <td></td>
+                <td class="socials_and_economics"></td>
+                <td class="medicine"></td>
+                <td class="technic"></td>
+                <td class="art_and_fhysical_education"></td>
+                <td class="languages"></td>
+                <td class="artistic-literature"></td>
+                <td class="for_small_children"></td>
+                <td class="childrens_literature"></td>
+                <td class="bibliography"></td>
+                <td class="local"></td>
+            </tr>
+            <tr>
+                <th class="month_number">30</th>
+                <td class="fisical_documents"></td>
+                <td class="all_station_documents"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_more_15"></td>
+                <td></td>
+                <td class="all_documents_types_and_view"></td>
+                <td class="books"></td>
+                <td class="magazines"></td>
+                <td></td>
+                <td></td>
+                <td class="socials_and_economics"></td>
+                <td class="medicine"></td>
+                <td class="technic"></td>
+                <td class="art_and_fhysical_education"></td>
+                <td class="languages"></td>
+                <td class="artistic-literature"></td>
+                <td class="for_small_children"></td>
+                <td class="childrens_literature"></td>
+                <td class="bibliography"></td>
+                <td class="local"></td>
+            </tr>
+            <tr>
+                <th class="month_number">31</th>
+                <td class="fisical_documents"></td>
+                <td class="all_station_documents"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_more_15"></td>
+                <td></td>
+                <td class="all_documents_types_and_view"></td>
+                <td class="books"></td>
+                <td class="magazines"></td>
+                <td></td>
+                <td></td>
+                <td class="socials_and_economics"></td>
+                <td class="medicine"></td>
+                <td class="technic"></td>
+                <td class="art_and_fhysical_education"></td>
+                <td class="languages"></td>
+                <td class="artistic-literature"></td>
+                <td class="for_small_children"></td>
+                <td class="childrens_literature"></td>
+                <td class="bibliography"></td>
+                <td class="local"></td>
+            </tr>
+            <tr>
+                <th class="month_number">1</th>
+                <td class="fisical_documents"></td>
+                <td class="all_station_documents"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_more_15"></td>
+                <td></td>
+                <td class="all_documents_types_and_view"></td>
+                <td class="books"></td>
+                <td class="magazines"></td>
+                <td></td>
+                <td></td>
+                <td class="socials_and_economics"></td>
+                <td class="medicine"></td>
+                <td class="technic"></td>
+                <td class="art_and_fhysical_education"></td>
+                <td class="languages"></td>
+                <td class="artistic-literature"></td>
+                <td class="for_small_children"></td>
+                <td class="childrens_literature"></td>
+                <td class="bibliography"></td>
+                <td class="local"></td>
+            </tr>
+            <tr>
+                <th class="month_number">2</th>
+                <td class="fisical_documents"></td>
+                <td class="all_station_documents"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_more_15"></td>
+                <td></td>
+                <td class="all_documents_types_and_view"></td>
+                <td class="books"></td>
+                <td class="magazines"></td>
+                <td></td>
+                <td></td>
+                <td class="socials_and_economics"></td>
+                <td class="medicine"></td>
+                <td class="technic"></td>
+                <td class="art_and_fhysical_education"></td>
+                <td class="languages"></td>
+                <td class="artistic-literature"></td>
+                <td class="for_small_children"></td>
+                <td class="childrens_literature"></td>
+                <td class="bibliography"></td>
+                <td class="local"></td>
+            </tr>
+            <tr>
+                <th class="month_number">3</th>
+                <td class="fisical_documents"></td>
+                <td class="all_station_documents"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_more_15"></td>
+                <td></td>
+                <td class="all_documents_types_and_view"></td>
+                <td class="books"></td>
+                <td class="magazines"></td>
+                <td></td>
+                <td></td>
+                <td class="socials_and_economics"></td>
+                <td class="medicine"></td>
+                <td class="technic"></td>
+                <td class="art_and_fhysical_education"></td>
+                <td class="languages"></td>
+                <td class="artistic-literature"></td>
+                <td class="for_small_children"></td>
+                <td class="childrens_literature"></td>
+                <td class="bibliography"></td>
+                <td class="local"></td>
+            </tr>
+            <tr>
+                <th class="month_number">4</th>
+                <td class="fisical_documents"></td>
+                <td class="all_station_documents"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_more_15"></td>
+                <td></td>
+                <td class="all_documents_types_and_view"></td>
+                <td class="books"></td>
+                <td class="magazines"></td>
+                <td></td>
+                <td></td>
+                <td class="socials_and_economics"></td>
+                <td class="medicine"></td>
+                <td class="technic"></td>
+                <td class="art_and_fhysical_education"></td>
+                <td class="languages"></td>
+                <td class="artistic-literature"></td>
+                <td class="for_small_children"></td>
+                <td class="childrens_literature"></td>
+                <td class="bibliography"></td>
+                <td class="local"></td>
+            </tr>
+            <tr>
+                <th class="month_number">5</th>
+                <td class="fisical_documents"></td>
+                <td class="all_station_documents"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_more_15"></td>
+                <td></td>
+                <td class="all_documents_types_and_view"></td>
+                <td class="books"></td>
+                <td class="magazines"></td>
+                <td></td>
+                <td></td>
+                <td class="socials_and_economics"></td>
+                <td class="medicine"></td>
+                <td class="technic"></td>
+                <td class="art_and_fhysical_education"></td>
+                <td class="languages"></td>
+                <td class="artistic-literature"></td>
+                <td class="for_small_children"></td>
+                <td class="childrens_literature"></td>
+                <td class="bibliography"></td>
+                <td class="local"></td>
+            </tr>
+            <tr>
+                <th class="month_number">6</th>
+                <td class="fisical_documents"></td>
+                <td class="all_station_documents"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_more_15"></td>
+                <td></td>
+                <td class="all_documents_types_and_view"></td>
+                <td class="books"></td>
+                <td class="magazines"></td>
+                <td></td>
+                <td></td>
+                <td class="socials_and_economics"></td>
+                <td class="medicine"></td>
+                <td class="technic"></td>
+                <td class="art_and_fhysical_education"></td>
+                <td class="languages"></td>
+                <td class="artistic-literature"></td>
+                <td class="for_small_children"></td>
+                <td class="childrens_literature"></td>
+                <td class="bibliography"></td>
+                <td class="local"></td>
+            </tr>
+            <tr>
+                <th class="month_number">7</th>
+                <td class="fisical_documents"></td>
+                <td class="all_station_documents"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_more_15"></td>
+                <td></td>
+                <td class="all_documents_types_and_view"></td>
+                <td class="books"></td>
+                <td class="magazines"></td>
+                <td></td>
+                <td></td>
+                <td class="socials_and_economics"></td>
+                <td class="medicine"></td>
+                <td class="technic"></td>
+                <td class="art_and_fhysical_education"></td>
+                <td class="languages"></td>
+                <td class="artistic-literature"></td>
+                <td class="for_small_children"></td>
+                <td class="childrens_literature"></td>
+                <td class="bibliography"></td>
+                <td class="local"></td>
+            </tr>
+            <tr>
+                <th class="month_number">8</th>
+                <td class="fisical_documents"></td>
+                <td class="all_station_documents"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_more_15"></td>
+                <td></td>
+                <td class="all_documents_types_and_view"></td>
+                <td class="books"></td>
+                <td class="magazines"></td>
+                <td></td>
+                <td></td>
+                <td class="socials_and_economics"></td>
+                <td class="medicine"></td>
+                <td class="technic"></td>
+                <td class="art_and_fhysical_education"></td>
+                <td class="languages"></td>
+                <td class="artistic-literature"></td>
+                <td class="for_small_children"></td>
+                <td class="childrens_literature"></td>
+                <td class="bibliography"></td>
+                <td class="local"></td>
+            </tr>
+            <tr>
+                <th class="month_number">9</th>
+                <td class="fisical_documents"></td>
+                <td class="all_station_documents"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_more_15"></td>
+                <td></td>
+                <td class="all_documents_types_and_view"></td>
+                <td class="books"></td>
+                <td class="magazines"></td>
+                <td></td>
+                <td></td>
+                <td class="socials_and_economics"></td>
+                <td class="medicine"></td>
+                <td class="technic"></td>
+                <td class="art_and_fhysical_education"></td>
+                <td class="languages"></td>
+                <td class="artistic-literature"></td>
+                <td class="for_small_children"></td>
+                <td class="childrens_literature"></td>
+                <td class="bibliography"></td>
+                <td class="local"></td>
+            </tr>
+            <tr>
+                <th class="month_number">10</th>
+                <td class="fisical_documents"></td>
+                <td class="all_station_documents"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_more_15"></td>
+                <td></td>
+                <td class="all_documents_types_and_view"></td>
+                <td class="books"></td>
+                <td class="magazines"></td>
+                <td></td>
+                <td></td>
+                <td class="socials_and_economics"></td>
+                <td class="medicine"></td>
+                <td class="technic"></td>
+                <td class="art_and_fhysical_education"></td>
+                <td class="languages"></td>
+                <td class="artistic-literature"></td>
+                <td class="for_small_children"></td>
+                <td class="childrens_literature"></td>
+                <td class="bibliography"></td>
+                <td class="local"></td>
+            </tr>
+            <tr>
+                <th class="month_number">11</th>
+                <td class="fisical_documents"></td>
+                <td class="all_station_documents"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_more_15"></td>
+                <td></td>
+                <td class="all_documents_types_and_view"></td>
+                <td class="books"></td>
+                <td class="magazines"></td>
+                <td></td>
+                <td></td>
+                <td class="socials_and_economics"></td>
+                <td class="medicine"></td>
+                <td class="technic"></td>
+                <td class="art_and_fhysical_education"></td>
+                <td class="languages"></td>
+                <td class="artistic-literature"></td>
+                <td class="for_small_children"></td>
+                <td class="childrens_literature"></td>
+                <td class="bibliography"></td>
+                <td class="local"></td>
+            </tr>
+            <tr>
+                <th class="month_number">12</th>
+                <td class="fisical_documents"></td>
+                <td class="all_station_documents"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_more_15"></td>
+                <td></td>
+                <td class="all_documents_types_and_view"></td>
+                <td class="books"></td>
+                <td class="magazines"></td>
+                <td></td>
+                <td></td>
+                <td class="socials_and_economics"></td>
+                <td class="medicine"></td>
+                <td class="technic"></td>
+                <td class="art_and_fhysical_education"></td>
+                <td class="languages"></td>
+                <td class="artistic-literature"></td>
+                <td class="for_small_children"></td>
+                <td class="childrens_literature"></td>
+                <td class="bibliography"></td>
+                <td class="local"></td>
+            </tr>
+            <tr>
+                <th class="month_number">13</th>
+                <td class="fisical_documents"></td>
+                <td class="all_station_documents"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_more_15"></td>
+                <td></td>
+                <td class="all_documents_types_and_view"></td>
+                <td class="books"></td>
+                <td class="magazines"></td>
+                <td></td>
+                <td></td>
+                <td class="socials_and_economics"></td>
+                <td class="medicine"></td>
+                <td class="technic"></td>
+                <td class="art_and_fhysical_education"></td>
+                <td class="languages"></td>
+                <td class="artistic-literature"></td>
+                <td class="for_small_children"></td>
+                <td class="childrens_literature"></td>
+                <td class="bibliography"></td>
+                <td class="local"></td>
+            </tr>
+            <tr>
+                <th class="month_number">14</th>
+                <td class="fisical_documents"></td>
+                <td class="all_station_documents"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_more_15"></td>
+                <td></td>
+                <td class="all_documents_types_and_view"></td>
+                <td class="books"></td>
+                <td class="magazines"></td>
+                <td></td>
+                <td></td>
+                <td class="socials_and_economics"></td>
+                <td class="medicine"></td>
+                <td class="technic"></td>
+                <td class="art_and_fhysical_education"></td>
+                <td class="languages"></td>
+                <td class="artistic-literature"></td>
+                <td class="for_small_children"></td>
+                <td class="childrens_literature"></td>
+                <td class="bibliography"></td>
+                <td class="local"></td>
+            </tr>
+            <tr>
+                <th class="month_number">15</th>
+                <td class="fisical_documents"></td>
+                <td class="all_station_documents"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_more_15"></td>
+                <td></td>
+                <td class="all_documents_types_and_view"></td>
+                <td class="books"></td>
+                <td class="magazines"></td>
+                <td></td>
+                <td></td>
+                <td class="socials_and_economics"></td>
+                <td class="medicine"></td>
+                <td class="technic"></td>
+                <td class="art_and_fhysical_education"></td>
+                <td class="languages"></td>
+                <td class="artistic-literature"></td>
+                <td class="for_small_children"></td>
+                <td class="childrens_literature"></td>
+                <td class="bibliography"></td>
+                <td class="local"></td>
+            </tr>
+            <tr>
+                <th class="month_number">16</th>
+                <td class="fisical_documents"></td>
+                <td class="all_station_documents"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_more_15"></td>
+                <td></td>
+                <td class="all_documents_types_and_view"></td>
+                <td class="books"></td>
+                <td class="magazines"></td>
+                <td></td>
+                <td></td>
+                <td class="socials_and_economics"></td>
+                <td class="medicine"></td>
+                <td class="technic"></td>
+                <td class="art_and_fhysical_education"></td>
+                <td class="languages"></td>
+                <td class="artistic-literature"></td>
+                <td class="for_small_children"></td>
+                <td class="childrens_literature"></td>
+                <td class="bibliography"></td>
+                <td class="local"></td>
+            </tr>
+            <tr>
+                <th class="month_number">17</th>
+                <td class="fisical_documents"></td>
+                <td class="all_station_documents"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_more_15"></td>
+                <td></td>
+                <td class="all_documents_types_and_view"></td>
+                <td class="books"></td>
+                <td class="magazines"></td>
+                <td></td>
+                <td></td>
+                <td class="socials_and_economics"></td>
+                <td class="medicine"></td>
+                <td class="technic"></td>
+                <td class="art_and_fhysical_education"></td>
+                <td class="languages"></td>
+                <td class="artistic-literature"></td>
+                <td class="for_small_children"></td>
+                <td class="childrens_literature"></td>
+                <td class="bibliography"></td>
+                <td class="local"></td>
+            </tr>
+            <tr>
+                <th class="month_number">18</th>
+                <td class="fisical_documents"></td>
+                <td class="all_station_documents"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_more_15"></td>
+                <td></td>
+                <td class="all_documents_types_and_view"></td>
+                <td class="books"></td>
+                <td class="magazines"></td>
+                <td></td>
+                <td></td>
+                <td class="socials_and_economics"></td>
+                <td class="medicine"></td>
+                <td class="technic"></td>
+                <td class="art_and_fhysical_education"></td>
+                <td class="languages"></td>
+                <td class="artistic-literature"></td>
+                <td class="for_small_children"></td>
+                <td class="childrens_literature"></td>
+                <td class="bibliography"></td>
+                <td class="local"></td>
+            </tr>
+            <tr>
+                <th class="month_number">19</th>
+                <td class="fisical_documents"></td>
+                <td class="all_station_documents"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_more_15"></td>
+                <td></td>
+                <td class="all_documents_types_and_view"></td>
+                <td class="books"></td>
+                <td class="magazines"></td>
+                <td></td>
+                <td></td>
+                <td class="socials_and_economics"></td>
+                <td class="medicine"></td>
+                <td class="technic"></td>
+                <td class="art_and_fhysical_education"></td>
+                <td class="languages"></td>
+                <td class="artistic-literature"></td>
+                <td class="for_small_children"></td>
+                <td class="childrens_literature"></td>
+                <td class="bibliography"></td>
+                <td class="local"></td>
+            </tr>
+            <tr>
+                <th class="month_number">20</th>
+                <td class="fisical_documents"></td>
+                <td class="all_station_documents"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_more_15"></td>
+                <td></td>
+                <td class="all_documents_types_and_view"></td>
+                <td class="books"></td>
+                <td class="magazines"></td>
+                <td></td>
+                <td></td>
+                <td class="socials_and_economics"></td>
+                <td class="medicine"></td>
+                <td class="technic"></td>
+                <td class="art_and_fhysical_education"></td>
+                <td class="languages"></td>
+                <td class="artistic-literature"></td>
+                <td class="for_small_children"></td>
+                <td class="childrens_literature"></td>
+                <td class="bibliography"></td>
+                <td class="local"></td>
+            </tr>
+            <tr>
+                <th class="month_number">21</th>
+                <td class="fisical_documents"></td>
+                <td class="all_station_documents"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_more_15"></td>
+                <td></td>
+                <td class="all_documents_types_and_view"></td>
+                <td class="books"></td>
+                <td class="magazines"></td>
+                <td></td>
+                <td></td>
+                <td class="socials_and_economics"></td>
+                <td class="medicine"></td>
+                <td class="technic"></td>
+                <td class="art_and_fhysical_education"></td>
+                <td class="languages"></td>
+                <td class="artistic-literature"></td>
+                <td class="for_small_children"></td>
+                <td class="childrens_literature"></td>
+                <td class="bibliography"></td>
+                <td class="local"></td>
+            </tr>
+            <tr>
+                <th class="month_number">22</th>
+                <td class="fisical_documents"></td>
+                <td class="all_station_documents"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_more_15"></td>
+                <td></td>
+                <td class="all_documents_types_and_view"></td>
+                <td class="books"></td>
+                <td class="magazines"></td>
+                <td></td>
+                <td></td>
+                <td class="socials_and_economics"></td>
+                <td class="medicine"></td>
+                <td class="technic"></td>
+                <td class="art_and_fhysical_education"></td>
+                <td class="languages"></td>
+                <td class="artistic-literature"></td>
+                <td class="for_small_children"></td>
+                <td class="childrens_literature"></td>
+                <td class="bibliography"></td>
+                <td class="local"></td>
+            </tr>
+            <tr>
+                <th class="month_number">23</th>
+                <td class="fisical_documents"></td>
+                <td class="all_station_documents"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_more_15"></td>
+                <td></td>
+                <td class="all_documents_types_and_view"></td>
+                <td class="books"></td>
+                <td class="magazines"></td>
+                <td></td>
+                <td></td>
+                <td class="socials_and_economics"></td>
+                <td class="medicine"></td>
+                <td class="technic"></td>
+                <td class="art_and_fhysical_education"></td>
+                <td class="languages"></td>
+                <td class="artistic-literature"></td>
+                <td class="for_small_children"></td>
+                <td class="childrens_literature"></td>
+                <td class="bibliography"></td>
+                <td class="local"></td>
+            </tr>
+            <tr>
+                <th class="month_number">24</th>
+                <td class="fisical_documents"></td>
+                <td class="all_station_documents"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_more_15"></td>
+                <td></td>
+                <td class="all_documents_types_and_view"></td>
+                <td class="books"></td>
+                <td class="magazines"></td>
+                <td></td>
+                <td></td>
+                <td class="socials_and_economics"></td>
+                <td class="medicine"></td>
+                <td class="technic"></td>
+                <td class="art_and_fhysical_education"></td>
+                <td class="languages"></td>
+                <td class="artistic-literature"></td>
+                <td class="for_small_children"></td>
+                <td class="childrens_literature"></td>
+                <td class="bibliography"></td>
+                <td class="local"></td>
+            </tr>
+            <tr>
+                <th class="month_number">25</th>
+                <td class="fisical_documents"></td>
+                <td class="all_station_documents"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_more_15"></td>
+                <td></td>
+                <td class="all_documents_types_and_view"></td>
+                <td class="books"></td>
+                <td class="magazines"></td>
+                <td></td>
+                <td></td>
+                <td class="socials_and_economics"></td>
+                <td class="medicine"></td>
+                <td class="technic"></td>
+                <td class="art_and_fhysical_education"></td>
+                <td class="languages"></td>
+                <td class="artistic-literature"></td>
+                <td class="for_small_children"></td>
+                <td class="childrens_literature"></td>
+                <td class="bibliography"></td>
+                <td class="local"></td>
+            </tr>
+            <tr>
+                <th class="month_number">26</th>
+                <td class="fisical_documents"></td>
+                <td class="all_station_documents"></td>
+                <td class="childrens_before_14"></td>
+                <td class="childrens_more_15"></td>
+                <td></td>
+                <td class="all_documents_types_and_view"></td>
+                <td class="books"></td>
+                <td class="magazines"></td>
+                <td></td>
+                <td></td>
+                <td class="socials_and_economics"></td>
+                <td class="medicine"></td>
+                <td class="technic"></td>
+                <td class="art_and_fhysical_education"></td>
+                <td class="languages"></td>
+                <td class="artistic-literature"></td>
+                <td class="for_small_children"></td>
+                <td class="childrens_literature"></td>
+                <td class="bibliography"></td>
+                <td class="local"></td>
+            </tr>
+            <tr class="last-row">
+                <th>Итого</th>
+                <td class="summ-of-all">Итого</td>
+                <td class="summ-of-station-documents">Итого</td>
+                <td class="summ-children-14">Итого</td>
+                <td class="summ-children-15">Итого</td>
+                <td>Итого</td>
+                <td class="summ-of-all-type-and-kind">Итого</td>
+                <td class="summ-books">Итого</td>
+                <td class="summ-magazines">Итого</td>
+                <td>Итого</td>
+                <td>Итого</td>
+                <td class="summ-socials">Итого</td>
+                <td class="summ-medicines">Итого</td>
+                <td class="summ-technicals">Итого</td>
+                <td class="summ-arts">Итого</td>
+                <td class="summ-languages">Итого</td>
+                <td class="summ-artistic-literature">Итого</td>
+                <td class="summ-small-childrens">Итого</td>
+                <td class="summ-childrens-literature">Итого</td>
+                <td class="summ-bibliography">Итого</td>
+                <td class="summ-local">Итого</td>
+            </tr>
+        </tbody>
+
+        <script src="../scripts/bookGetsScript.js"></script>
+</body>
+</html>
