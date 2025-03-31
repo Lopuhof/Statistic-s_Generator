@@ -89,6 +89,7 @@ function generateAllReferences(
     days,
     min, 
     max, 
+    forChildrens,
     forLittleChildrens,
     artisticBook,
     philology,
@@ -113,6 +114,14 @@ function generateAllReferences(
     summMedicine,
     summTechAndVillage,
     summArtsAndSports,
+    summAllLanguages,
+    summOfArtisticsLiterature,
+    summOfAllBooksForSmallChildrens,
+    summOfAllChildrensBooks,
+    biblio,
+    summOfBilio,
+    locality,
+    summOfLocality
     ) {
     referenceButton[0].addEventListener('click', function() {
         min = +min.value;
@@ -128,12 +137,12 @@ function generateAllReferences(
         let summMed = 0;
         let summTech = 0;
         let summSports = 0;
-        let adressesOfAll = 0;
-        let factsOfAll = 0;
-        let clarificationsOfAll = 0;
-        let localsOfAll = 0;
-        let ecologyOfAll = 0;
-        let healthOfAll = 0;
+        let languagesAll = 0;
+        let allArtiscticLiterature = 0;
+        let allForSmallChildrens = 0;
+        let allChildrensBooks = 0;
+        let allBiblio = 0;
+        let allLocal = 0;
 
         for (let i = 0; i < summ.length; i = i + 1) {
 
@@ -143,6 +152,7 @@ function generateAllReferences(
 
                 //Элементы, из которых складывается общая сумма
 
+                forChildrens[i].textContent = Math.floor((Math.random() * ((85 - 80) + 80) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
                 forLittleChildrens[i].textContent = Math.floor((Math.random() * ((85 - 80) + 80) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
                 artisticBook[i].textContent = Math.floor((Math.random() * ((85 - 80) + 80) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
                 philology[i].textContent = Math.floor((Math.random() * ((20 - 18) + 18) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
@@ -150,14 +160,17 @@ function generateAllReferences(
                 tech[i].textContent =  Math.floor((Math.random() * ((6 - 4) + 4) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
                 med[i].textContent =  Math.floor((Math.random() * ((6 - 4) + 4) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
                 socEconom[i].textContent = Math.floor((Math.random() * ((6 - 4) + 4) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
+                biblio[i].textContent = Math.floor((Math.random() * ((1 - 0) + 0) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
+                locality[i].textContent = Math.floor((Math.random() * ((1 - 0) + 0) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
 
                 //Элементы с общей суммой
-                
+
                 allDocumentsTypeAndKinds[i].textContent = ((+forLittleChildrens[i].textContent) + (+artisticBook[i].textContent) + (+philology[i].textContent) + (+artBooks[i].textContent) + (+tech[i].textContent) + (+med[i].textContent) + (+socEconom[i].textContent) + (+periodic[i].textContent));
                 periodic[i].textContent = Math.floor((Math.random() * ((40 - 40) + 40) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
                 literature[i].textContent = Math.floor((Math.random() * ((60 - 60) + 60) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
                 summ[i].textContent = allDocumentsTypeAndKinds[i].textContent;
                 station[i].textContent = summ[i].textContent;
+
 
                 //Категории пользователей
 
@@ -198,6 +211,24 @@ function generateAllReferences(
 
                 summSports = +summSports + (+artBooks[i].textContent);
                 summArtsAndSports[0].textContent = summSports;
+
+                languagesAll = +languagesAll + (+philology[i].textContent);
+                summAllLanguages[0].textContent = languagesAll;
+
+                allArtiscticLiterature = +allArtiscticLiterature + (+artisticBook[i].textContent);
+                summOfArtisticsLiterature[0].textContent = allArtiscticLiterature;
+
+                allForSmallChildrens = +allForSmallChildrens + (+forLittleChildrens[i].textContent);
+                summOfAllBooksForSmallChildrens[0].textContent = allForSmallChildrens;
+
+                allChildrensBooks = +allChildrensBooks + (+forChildrens[i].textContent);
+                summOfAllChildrensBooks[0].textContent = allChildrensBooks;
+
+                allBiblio = +allBiblio + (+biblio[i].textContent);
+                summOfBilio[0].textContent = allBiblio;
+
+                allLocal = +allLocal + (+locality[i].textContent);
+                summOfLocality[0].textContent = allLocal;
             };
         };
     });
@@ -208,6 +239,7 @@ generateAllReferences(
     monthDays,
     minAllReferences, 
     maxAllReferences, 
+    childrensLiterature,
     forSmallChildren,
     artisticLiterature, 
     languages, 
@@ -234,5 +266,10 @@ generateAllReferences(
     summArts,
     summLanguages,
     summArtisticLiterature,
+    summSmallChildrens,
     summChildrensLiterature,
+    bibliography,
+    summBibliography,
+    local,
+    summLocal
 );
