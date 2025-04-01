@@ -155,7 +155,7 @@ function generateAllReferences(
                 forChildrens[i].textContent = Math.floor((Math.random() * ((85 - 80) + 80) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
                 forLittleChildrens[i].textContent = Math.floor((Math.random() * ((85 - 80) + 80) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
                 artisticBook[i].textContent = Math.floor((Math.random() * ((85 - 80) + 80) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
-                philology[i].textContent = Math.floor((Math.random() * ((20 - 18) + 18) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
+                philology[i].textContent = Math.floor((Math.random() * ((3 - 1) + 1) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
                 artBooks[i].textContent =  Math.floor((Math.random() * ((6 - 4) + 4) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
                 tech[i].textContent =  Math.floor((Math.random() * ((6 - 4) + 4) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
                 med[i].textContent =  Math.floor((Math.random() * ((6 - 4) + 4) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
@@ -165,16 +165,15 @@ function generateAllReferences(
 
                 //Элементы с общей суммой
 
-                allDocumentsTypeAndKinds[i].textContent = ((+forLittleChildrens[i].textContent) + (+artisticBook[i].textContent) + (+philology[i].textContent) + (+artBooks[i].textContent) + (+tech[i].textContent) + (+med[i].textContent) + (+socEconom[i].textContent) + (+periodic[i].textContent));
-                periodic[i].textContent = Math.floor((Math.random() * ((40 - 40) + 40) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
-                literature[i].textContent = Math.floor((Math.random() * ((60 - 60) + 60) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
+                allDocumentsTypeAndKinds[i].textContent = ((+forLittleChildrens[i].textContent) + (+artisticBook[i].textContent) + (+philology[i].textContent) + (+artBooks[i].textContent) + (+tech[i].textContent) + (+med[i].textContent) + (+socEconom[i].textContent) + (+periodic[i].textContent));                
                 summ[i].textContent = allDocumentsTypeAndKinds[i].textContent;
                 station[i].textContent = summ[i].textContent;
-
+                literature[i].textContent = +allDocumentsTypeAndKinds[i].textContent - Math.floor(Math.random() * ((100 - 90) + 20));
+                periodic[i].textContent = +allDocumentsTypeAndKinds[i].textContent - (+literature[i].textContent);
 
                 //Категории пользователей
 
-                kids14[i].textContent = Math.floor((Math.random() * ((78 - 70) + 70) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
+                kids14[i].textContent = Math.floor((Math.random() * ((60 - 39) + 39) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
                 kids15AndMore[i].textContent = Math.floor((Math.random() * ((20 - 16) + 16) / 100) * Math.floor(Math.random() * ((max + 1) - min) + min));
 
                 //Суммы всех показателей
